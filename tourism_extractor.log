@@ -1,0 +1,4 @@
+2025-06-28 23:35:51,003 - INFO - Iniciando extracción de datos turísticos de La Paz
+2025-06-28 23:35:51,004 - INFO - Enviando consulta a Overpass API...
+2025-06-28 23:35:52,850 - ERROR - Error en la conexión con Overpass API: 400 Client Error: Bad Request for url: https://overpass-api.de/api/interpreter
+2025-06-28 23:35:52,853 - ERROR - No se obtuvieron datos de OSM

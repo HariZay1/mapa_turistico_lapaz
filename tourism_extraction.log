@@ -1,0 +1,740 @@
+2025-06-28 23:38:35,648 - INFO - Iniciando extracción en modo API
+2025-06-28 23:38:35,648 - INFO - Intento 1 con endpoint https://overpass-api.de/api/interpreter
+2025-06-28 23:39:08,299 - INFO - Datos guardados en osm_data_latest.json
+2025-06-28 23:39:24,171 - ERROR - Error de base de datos: no hay restricción única o de exclusión que coincida con la especificación ON CONFLICT
+
+2025-06-28 23:39:24,173 - INFO - Iniciando extracción en modo FILE
+2025-06-28 23:39:24,174 - ERROR - Error cargando archivo osm_data_sample.json: [Errno 2] No such file or directory: 'data\\osm_data_sample.json'
+2025-06-28 23:39:24,174 - ERROR - No se obtuvieron datos para procesar
+2025-06-28 23:39:24,175 - INFO - Iniciando extracción en modo MANUAL
+2025-06-28 23:39:26,702 - ERROR - Error de base de datos: no hay restricción única o de exclusión que coincida con la especificación ON CONFLICT
+
+2025-06-28 23:42:53,299 - INFO - Consultando API: https://overpass-api.de/api/interpreter
+2025-06-28 23:43:27,077 - INFO - Datos guardados en osm_data_latest.json
+2025-06-28 23:43:49,287 - INFO - Insertados 50 lugares...
+2025-06-28 23:43:49,292 - INFO - Insertados 100 lugares...
+2025-06-28 23:43:49,299 - INFO - Insertados 150 lugares...
+2025-06-28 23:43:49,305 - INFO - Insertados 200 lugares...
+2025-06-28 23:43:49,310 - INFO - Insertados 250 lugares...
+2025-06-28 23:43:49,316 - INFO - Insertados 292 lugares...
+2025-06-28 23:43:49,320 - INFO - Total insertados/actualizados: 292
+2025-06-29 00:22:22,737 - INFO - Consultando API: https://overpass-api.de/api/interpreter
+2025-06-29 00:22:25,466 - WARNING - Error con https://overpass-api.de/api/interpreter: 'LaPazTourismExtractor' object has no attribute 'save_to_file'
+2025-06-29 00:22:25,466 - INFO - Consultando API: https://overpass.kumi.systems/api/interpreter
+2025-06-29 00:22:30,259 - WARNING - Error con https://overpass.kumi.systems/api/interpreter: 'LaPazTourismExtractor' object has no attribute 'save_to_file'
+2025-06-29 00:22:30,263 - INFO - Añadido lugar importante manualmente: Plaza Murillo
+2025-06-29 00:22:30,263 - INFO - Añadido lugar importante manualmente: Valle de la Luna
+2025-06-29 00:22:30,264 - INFO - Añadido lugar importante manualmente: Teleférico Rojo
+2025-06-29 00:22:30,264 - ERROR - Error en el proceso: 'LaPazTourismExtractor' object has no attribute 'process_elements'
+2025-06-29 00:25:30,348 - INFO - Consultando API: https://overpass-api.de/api/interpreter
+2025-06-29 00:26:04,385 - WARNING - Error con https://overpass-api.de/api/interpreter: 400 Client Error: Bad Request for url: https://overpass-api.de/api/interpreter
+2025-06-29 00:26:04,385 - INFO - Consultando API: https://overpass.kumi.systems/api/interpreter
+2025-06-29 00:26:40,369 - WARNING - Error con https://overpass.kumi.systems/api/interpreter: 400 Client Error: Bad Request for url: https://overpass.kumi.systems/api/interpreter
+2025-06-29 00:26:40,372 - INFO - Añadido lugar importante manualmente: Plaza Murillo
+2025-06-29 00:26:40,373 - INFO - Añadido lugar importante manualmente: Valle de la Luna
+2025-06-29 00:26:40,373 - INFO - Añadido lugar importante manualmente: Teleférico Rojo
+2025-06-29 00:26:44,178 - INFO - Insertados 3 lugares...
+2025-06-29 00:26:44,180 - INFO - Total insertados/actualizados: 3
+2025-06-29 00:30:07,845 - INFO - Consultando API: https://overpass-api.de/api/interpreter
+2025-06-29 00:30:13,787 - WARNING - Error con https://overpass-api.de/api/interpreter: 400 Client Error: Bad Request for url: https://overpass-api.de/api/interpreter
+2025-06-29 00:30:13,787 - INFO - Consultando API: https://overpass.kumi.systems/api/interpreter
+2025-06-29 00:30:21,399 - WARNING - Error con https://overpass.kumi.systems/api/interpreter: 400 Client Error: Bad Request for url: https://overpass.kumi.systems/api/interpreter
+2025-06-29 00:30:21,401 - INFO - Intentando con datos de archivo...
+2025-06-29 00:30:21,402 - INFO - Usando datos manuales...
+2025-06-29 00:30:24,946 - INFO - Filtrados 19 lugares de 19 originales
+2025-06-29 00:30:25,230 - ERROR - Error de base de datos: literal de array mal formado: «["https://upload.wikimedia.org/wikipedia/commons/8/85/LaPointeDuChay.JPG"]»
+LINE 6: ...5, -16.4958),4326),'Consultar horarios','','',5.0,'["https:/...
+                                                             ^
+DETAIL:  Un «[» debe introducir dimensiones de array especificadas explícitamente.
+
+2025-06-29 00:31:54,040 - INFO - Consultando API: https://overpass-api.de/api/interpreter
+2025-06-29 00:33:55,161 - INFO - Datos guardados en osm_data_latest.json
+2025-06-29 00:35:11,505 - INFO - Filtrados 121 lugares de 1382 originales
+2025-06-29 00:35:11,622 - ERROR - Error de base de datos: no existe la columna «fecha_actualizacion» en la relación «lugares_turisticos»
+LINE 21:                         fecha_actualizacion = CURRENT_TIMEST...
+                                 ^
+
+2025-06-29 00:37:58,754 - INFO - Consultando API: https://overpass-api.de/api/interpreter
+2025-06-29 00:40:21,438 - INFO - Datos guardados en osm_data_latest.json
+2025-06-29 00:41:59,670 - INFO - Filtrados 121 lugares de 1382 originales
+2025-06-29 00:42:00,375 - WARNING - Error insertando Basílica María Auxiliadora: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,377 - WARNING - Error insertando Basílica María Auxiliadora: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,379 - WARNING - Error insertando Mirador Killi Killi: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,380 - WARNING - Error insertando Mercado Lanza: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,381 - WARNING - Error insertando Valle de las ánimas: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,384 - WARNING - Error insertando Valle de las Agujas: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,386 - WARNING - Error insertando Mirador Killi Killi: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,392 - WARNING - Error insertando Museo Nacional de Historia Natural: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,394 - WARNING - Error insertando Carlos Palenque Avilés: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,395 - WARNING - Error insertando Luis Espinal Camps: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,396 - WARNING - Error insertando Catedral Metropolitana: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,397 - WARNING - Error insertando Catedral Metropolitana: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,398 - WARNING - Error insertando Plaza Murillo: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,399 - WARNING - Error insertando Plaza San Francisco: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,400 - WARNING - Error insertando Plaza Murillo: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,401 - WARNING - Error insertando Lucha Libre Cholitas: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,406 - WARNING - Error insertando Lucha libre de cholitas: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,408 - WARNING - Error insertando Catedral Metropolitana: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,409 - WARNING - Error insertando Germán Busch: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,410 - WARNING - Error insertando Fokker F-27-400M Friendship: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,411 - WARNING - Error insertando General José Manuel Pando: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,413 - WARNING - Error insertando Douglas C-47: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,414 - WARNING - Error insertando Lockheed C-130A Hercules: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,416 - WARNING - Error insertando Basílica de San Francisco: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,417 - WARNING - Error insertando Basílica de San Francisco: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,418 - WARNING - Error insertando Cerro Muela del Diablo: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,428 - WARNING - Error insertando Cerro Muela del Diablo: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,430 - WARNING - Error insertando Fokker F-27-400M Friendship: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,432 - WARNING - Error insertando Douglas C-47: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,435 - WARNING - Error insertando Lockheed C-130A Hercules: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,443 - WARNING - Error insertando Lockheed T-33A Shooting Star: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,444 - WARNING - Error insertando Lockheed T-33A Shooting Star: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,445 - WARNING - Error insertando Confucio: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,447 - WARNING - Error insertando Simón Bolívar: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,448 - WARNING - Error insertando Confucio: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,448 - WARNING - Error insertando Museo San Francisco: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,450 - WARNING - Error insertando Museo Casa de Murillo: error de sintaxis al final de la entrada
+LINE 25:                     
+                             ^
+
+2025-06-29 00:42:00,450 - WARNING - Error insertando Mirador Killi Killi: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,450 - WARNING - Error insertando Faro de Murillo: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,452 - WARNING - Error insertando Museo de la Revolución: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,457 - WARNING - Error insertando Pedro Domingo Murillo: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,458 - WARNING - Error insertando Curtiss Commando C-46: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,459 - WARNING - Error insertando C-1655: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,461 - WARNING - Error insertando Curtiss Commando C-46: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,462 - WARNING - Error insertando Primera sentencia contra Don Pedro Domingo Murillo: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,464 - WARNING - Error insertando Museo de la Revolución: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,466 - WARNING - Error insertando Mercado de las Brujas: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,468 - WARNING - Error insertando Mercado Killi Killi: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,470 - WARNING - Error insertando Linea Verde: Libertador-Alto Obrajes: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,475 - WARNING - Error insertando Línea Amarilla: Mirador-El Libertador: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,477 - WARNING - Error insertando Casa de la Cultura Franz Tamayo: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,479 - WARNING - Error insertando Plaza España: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,480 - WARNING - Error insertando Plaza Franz Tamayo: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,481 - WARNING - Error insertando Plaza Abaroa: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,482 - WARNING - Error insertando Plaza 14 de Septiembre: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,482 - WARNING - Error insertando Plaza de Las Culturas: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,484 - WARNING - Error insertando Plaza España: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,485 - WARNING - Error insertando Jardín Botánico: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,490 - WARNING - Error insertando Parque Laguna de Cota Cota: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,491 - WARNING - Error insertando Plaza Franz Tamayo: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,493 - WARNING - Error insertando Plaza Vicenta Juaristi Eguino: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,495 - WARNING - Error insertando Jardín Botánico La Paz: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,599 - WARNING - Error insertando Museo de Arte Sacro: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,662 - WARNING - Error insertando Museo Nacional de Arte: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,672 - WARNING - Error insertando Tambo Quirquincho: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,716 - WARNING - Error insertando Museo de la Coca: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,744 - WARNING - Error insertando Museo de Arte Antonio Paredes Candia: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,745 - WARNING - Error insertando Museo de Textiles Andinos Bolivianos: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,781 - WARNING - Error insertando Museo Infantil Pipiripi: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,784 - WARNING - Error insertando Museo Histórico Naval: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,792 - WARNING - Error insertando Museo de Metales Preciosos: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,796 - WARNING - Error insertando Museo del Litoral Boliviano: error de sintaxis al final de la entrada
+LINE 25:                     
+                             ^
+
+2025-06-29 00:42:00,813 - WARNING - Error insertando Mirador Jacha Kollo: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,815 - WARNING - Error insertando Mirador PUC: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,818 - WARNING - Error insertando Mirador Cactareo de Mallasa: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,826 - WARNING - Error insertando Mirador Mallasilla: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,828 - WARNING - Error insertando Mirador Sendero El Águila: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,830 - WARNING - Error insertando Mirador Alto San Antonio: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,832 - WARNING - Error insertando Laikacota: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,834 - WARNING - Error insertando Fuente prado Alteño: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,839 - WARNING - Error insertando Aguas Danzantes: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,841 - WARNING - Error insertando Cactareo de Mallasa: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,843 - WARNING - Error insertando Peces: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,847 - WARNING - Error insertando 7 Lagunas: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,848 - WARNING - Error insertando 7 Lagunas: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,849 - WARNING - Error insertando 7 Lagunas: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,850 - WARNING - Error insertando 7 Lagunas: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,852 - WARNING - Error insertando Faro Murillo: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,856 - WARNING - Error insertando Faro Murillo: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,858 - WARNING - Error insertando Faro Murillo: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,876 - WARNING - Error insertando Estación Faro de Murillo / Tiquira: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,879 - WARNING - Error insertando Iglesia Adventista del Séptimo día.: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,880 - WARNING - Error insertando Iglesia de San Miguel: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,882 - WARNING - Error insertando Edificio SCALA: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,883 - WARNING - Error insertando Parroquia La Merced: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,886 - WARNING - Error insertando La Iglesia de Jesucristo de los Santos de los Últimos Días: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,890 - WARNING - Error insertando Señor de Malta: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,893 - WARNING - Error insertando La Iglesia de Jesucristo de los Santos de los Últimos Días: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,896 - WARNING - Error insertando Parroquia - Sagrados Corazones: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,899 - WARNING - Error insertando Teatro El Desnivel: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,903 - WARNING - Error insertando Centro Sinfónico Nacional: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,907 - WARNING - Error insertando Teatro NUNA Espacio Arte: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,910 - WARNING - Error insertando Teatro Municipal Raúl Salmón de la Barra: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,913 - WARNING - Error insertando Teatro de la Parroquia Apostol Santiago: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,915 - WARNING - Error insertando Mercado Hinojosa: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,917 - WARNING - Error insertando Mercado Sopocachi: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,924 - WARNING - Error insertando Teofilo Miranda: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,925 - WARNING - Error insertando Mercado Villa Armonia: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,927 - WARNING - Error insertando Amor de Cobre: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,929 - WARNING - Error insertando Parque Infantil Ing. Angelina: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,930 - WARNING - Error insertando Cruz Roja: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,932 - WARNING - Error insertando Cancha de tierra: error de sintaxis al final de la entrada
+LINE 23:                     
+                             ^
+
+2025-06-29 00:42:00,934 - INFO - Total insertados/actualizados: 0
+2025-06-29 00:42:00,942 - INFO - === ESTADÍSTICAS POR CATEGORÍA ===
+2025-06-29 00:45:20,802 - INFO - Consultando API: https://overpass-api.de/api/interpreter
+2025-06-29 00:47:38,269 - INFO - Datos guardados en osm_data_latest.json
+2025-06-29 00:49:33,434 - INFO - Filtrados 131 lugares de 1382 originales
+2025-06-29 00:49:33,580 - INFO - Insertados 10 lugares...
+2025-06-29 00:49:33,615 - INFO - Insertados 20 lugares...
+2025-06-29 00:49:33,622 - INFO - Insertados 30 lugares...
+2025-06-29 00:49:33,627 - INFO - Insertados 40 lugares...
+2025-06-29 00:49:33,630 - INFO - Insertados 50 lugares...
+2025-06-29 00:49:33,633 - INFO - Insertados 60 lugares...
+2025-06-29 00:49:33,637 - INFO - Insertados 70 lugares...
+2025-06-29 00:49:33,641 - INFO - Insertados 80 lugares...
+2025-06-29 00:49:33,647 - INFO - Insertados 90 lugares...
+2025-06-29 00:49:33,652 - INFO - Insertados 100 lugares...
+2025-06-29 00:49:33,656 - INFO - Insertados 110 lugares...
+2025-06-29 00:49:33,660 - INFO - Insertados 120 lugares...
+2025-06-29 00:49:33,665 - INFO - Insertados 130 lugares...
+2025-06-29 00:49:33,670 - INFO - Total insertados/actualizados: 131
+2025-06-29 00:49:33,674 - INFO - === ESTADÍSTICAS POR CATEGORÍA ===
+2025-06-29 00:49:33,695 - INFO - mirador: 19 lugares
+2025-06-29 00:49:33,696 - INFO - teleferico: 15 lugares
+2025-06-29 00:49:33,696 - INFO - otros: 15 lugares
+2025-06-29 00:49:33,696 - INFO - patrimonio_historico: 15 lugares
+2025-06-29 00:49:33,696 - INFO - museo: 14 lugares
+2025-06-29 00:49:33,697 - INFO - iglesia: 10 lugares
+2025-06-29 00:49:33,697 - INFO - mercado: 8 lugares
+2025-06-29 00:49:33,697 - INFO - plaza: 7 lugares
+2025-06-29 00:49:33,697 - INFO - parque: 7 lugares
+2025-06-29 00:49:33,698 - INFO - teatro: 5 lugares
+2025-06-29 00:49:33,698 - INFO - basilica: 1 lugares
+2025-06-29 01:01:22,317 - INFO - Consultando API: https://overpass-api.de/api/interpreter
+2025-06-29 01:03:53,541 - INFO - Datos guardados en osm_data_latest.json
+2025-06-29 01:05:30,546 - INFO - Filtrados 131 lugares de 1382 originales
+2025-06-29 01:05:30,547 - INFO - Omitiendo nombre duplicado: 'Basílica María Auxiliadora' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:05:30,547 - INFO - Omitiendo nombre duplicado: 'Mirador Killi Killi' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:05:30,548 - INFO - Omitiendo nombre duplicado: 'Catedral Metropolitana' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:05:30,548 - INFO - Omitiendo nombre duplicado: 'Plaza Murillo' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:05:30,548 - INFO - Omitiendo nombre duplicado: 'Catedral Metropolitana' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:05:30,548 - INFO - Omitiendo nombre duplicado: 'Basílica de San Francisco' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:05:30,549 - INFO - Omitiendo nombre duplicado: 'Cerro Muela del Diablo' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:05:30,550 - INFO - Omitiendo nombre duplicado: 'Fokker F-27-400M Friendship' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:05:30,550 - INFO - Omitiendo nombre duplicado: 'Douglas C-47' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:05:30,550 - INFO - Omitiendo nombre duplicado: 'Lockheed C-130A Hercules' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:05:30,550 - INFO - Omitiendo nombre duplicado: 'Lockheed T-33A Shooting Star' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:05:30,551 - INFO - Omitiendo nombre duplicado: 'Confucio' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:05:30,551 - INFO - Omitiendo nombre duplicado: 'Mirador Killi Killi' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:05:30,551 - INFO - Omitiendo nombre duplicado: 'Curtiss Commando C-46' (rating: 4.8) - ya existe con rating: 4.8
+2025-06-29 01:05:30,551 - INFO - Omitiendo nombre duplicado: 'Museo de la Revolución' (rating: 4.8) - ya existe con rating: 4.8
+2025-06-29 01:05:30,551 - INFO - Omitiendo nombre duplicado: 'Plaza España' (rating: 4.5) - ya existe con rating: 4.5
+2025-06-29 01:05:30,552 - INFO - Omitiendo nombre duplicado: 'Plaza Franz Tamayo' (rating: 4.5) - ya existe con rating: 4.5
+2025-06-29 01:05:30,552 - INFO - Omitiendo nombre duplicado: '7 Lagunas' (rating: 4.0) - ya existe con rating: 4.0
+2025-06-29 01:05:30,552 - INFO - Omitiendo nombre duplicado: '7 Lagunas' (rating: 4.0) - ya existe con rating: 4.0
+2025-06-29 01:05:30,552 - INFO - Omitiendo nombre duplicado: '7 Lagunas' (rating: 4.0) - ya existe con rating: 4.0
+2025-06-29 01:05:30,553 - INFO - Omitiendo nombre duplicado: 'Faro Murillo' (rating: 4.0) - ya existe con rating: 4.0
+2025-06-29 01:05:30,553 - INFO - Omitiendo nombre duplicado: 'Faro Murillo' (rating: 4.0) - ya existe con rating: 4.0
+2025-06-29 01:05:30,553 - INFO - Omitiendo nombre duplicado: 'La Iglesia de Jesucristo de los Santos de los Últimos Días' (rating: 3.7) - ya existe con rating: 3.7
+2025-06-29 01:05:30,554 - INFO - Eliminados 23 nombres duplicados. Lugares únicos: 108
+2025-06-29 01:05:30,747 - INFO - Insertados 10 lugares...
+2025-06-29 01:05:30,751 - INFO - Insertados 20 lugares...
+2025-06-29 01:05:30,759 - INFO - Insertados 30 lugares...
+2025-06-29 01:05:30,764 - INFO - Insertados 40 lugares...
+2025-06-29 01:05:30,767 - INFO - Insertados 50 lugares...
+2025-06-29 01:05:30,771 - INFO - Insertados 60 lugares...
+2025-06-29 01:05:30,778 - INFO - Insertados 70 lugares...
+2025-06-29 01:05:30,782 - INFO - Insertados 80 lugares...
+2025-06-29 01:05:30,785 - INFO - Insertados 90 lugares...
+2025-06-29 01:05:30,789 - INFO - Insertados 100 lugares...
+2025-06-29 01:05:30,797 - INFO - Total insertados/actualizados: 108
+2025-06-29 01:05:30,801 - INFO - === ESTADÍSTICAS POR CATEGORÍA ===
+2025-06-29 01:05:30,801 - INFO - mirador: 18 lugares
+2025-06-29 01:05:30,801 - INFO - museo: 14 lugares
+2025-06-29 01:05:30,801 - INFO - patrimonio_historico: 14 lugares
+2025-06-29 01:05:30,801 - INFO - teleferico: 13 lugares
+2025-06-29 01:05:30,802 - INFO - otros: 12 lugares
+2025-06-29 01:05:30,802 - INFO - iglesia: 9 lugares
+2025-06-29 01:05:30,802 - INFO - mercado: 8 lugares
+2025-06-29 01:05:30,802 - INFO - parque: 7 lugares
+2025-06-29 01:05:30,802 - INFO - plaza: 7 lugares
+2025-06-29 01:05:30,803 - INFO - teatro: 5 lugares
+2025-06-29 01:05:30,803 - INFO - basilica: 1 lugares
+2025-06-29 01:06:33,736 - INFO - Consultando API: https://overpass-api.de/api/interpreter
+2025-06-29 01:09:03,163 - INFO - Datos guardados en osm_data_latest.json
+2025-06-29 01:09:06,080 - INFO - Foto encontrada para Museo Nacional de Historia Natural: Museo Nacional de Historia Natural (3274192149).jpg
+2025-06-29 01:09:06,087 - INFO - Total de 1 fotos agregadas para Museo Nacional de Historia Natural
+2025-06-29 01:09:08,642 - INFO - Foto encontrada para Confucio: Confucius, fresco from a Western Han tomb of Dongping County, Shandong province, China.jpg
+2025-06-29 01:09:08,643 - INFO - Foto encontrada para Confucio: Confucio saludo.JPG
+2025-06-29 01:09:08,644 - INFO - Total de 2 fotos agregadas para Confucio
+2025-06-29 01:09:10,074 - INFO - Foto encontrada para Germán Busch: Germán Busch - 4.jpg
+2025-06-29 01:09:10,074 - INFO - Total de 1 fotos agregadas para Germán Busch
+2025-06-29 01:09:11,321 - INFO - Foto encontrada para Carlos Palenque Avilés: Carlos Palenque - CROPPED.jpg
+2025-06-29 01:09:11,333 - INFO - Total de 1 fotos agregadas para Carlos Palenque Avilés
+2025-06-29 01:09:14,085 - INFO - Foto encontrada para Simón Bolívar: Simón Bolívar by Acevedo Bernal, 1922.jpg
+2025-06-29 01:09:14,086 - INFO - Total de 1 fotos agregadas para Simón Bolívar
+2025-06-29 01:09:16,163 - INFO - Foto encontrada para Fokker F-27-400M Friendship: Busy Bee F-27 at Basel 1982.jpg
+2025-06-29 01:09:16,166 - INFO - Total de 1 fotos agregadas para Fokker F-27-400M Friendship
+2025-06-29 01:09:19,471 - INFO - Foto encontrada para General José Manuel Pando: J M PANDO.jpg
+2025-06-29 01:09:19,473 - INFO - Total de 1 fotos agregadas para General José Manuel Pando
+2025-06-29 01:09:23,422 - INFO - Foto encontrada para Douglas C-47: C-47 Dakota - Chino Airshow 2014 (15867578416).jpg
+2025-06-29 01:09:23,424 - INFO - Total de 1 fotos agregadas para Douglas C-47
+2025-06-29 01:09:25,526 - INFO - Foto encontrada para Lockheed T-33A Shooting Star: Thunderbirds Lockheed T-33 Shooting Star, Chino, California.jpg
+2025-06-29 01:09:25,537 - INFO - Total de 1 fotos agregadas para Lockheed T-33A Shooting Star
+2025-06-29 01:09:27,301 - INFO - Foto encontrada para Lockheed C-130A Hercules: Lockheed C-130 Hercules.jpg
+2025-06-29 01:09:27,303 - INFO - Total de 1 fotos agregadas para Lockheed C-130A Hercules
+2025-06-29 01:09:28,864 - INFO - Foto encontrada para Casa de la Cultura Franz Tamayo: Casa de la Cultura Franz Tamayo 0.jpg
+2025-06-29 01:09:28,866 - INFO - Total de 1 fotos agregadas para Casa de la Cultura Franz Tamayo
+2025-06-29 01:09:30,668 - INFO - Foto encontrada para Basílica de San Francisco: Iglesia de San Francisco La Paz.JPG
+2025-06-29 01:09:30,669 - INFO - Total de 1 fotos agregadas para Basílica de San Francisco
+2025-06-29 01:09:32,866 - INFO - Foto encontrada para Basílica María Auxiliadora: BMA001.jpg
+2025-06-29 01:09:32,867 - INFO - Total de 1 fotos agregadas para Basílica María Auxiliadora
+2025-06-29 01:09:34,479 - INFO - Foto encontrada para Catedral Metropolitana: Catedral Metropolitana de La Paz.JPG
+2025-06-29 01:09:34,480 - INFO - Total de 1 fotos agregadas para Catedral Metropolitana
+2025-06-29 01:09:37,155 - INFO - Foto encontrada para Catedral Metropolitana: Catedral Metropolitana de La Paz.JPG
+2025-06-29 01:09:37,159 - INFO - Total de 1 fotos agregadas para Catedral Metropolitana
+2025-06-29 01:09:39,291 - INFO - Foto encontrada para Basílica de San Francisco: Iglesia de San Francisco La Paz.JPG
+2025-06-29 01:09:39,293 - INFO - Total de 1 fotos agregadas para Basílica de San Francisco
+2025-06-29 01:09:41,570 - INFO - Foto encontrada para Basílica María Auxiliadora: BMA001.jpg
+2025-06-29 01:09:41,571 - INFO - Total de 1 fotos agregadas para Basílica María Auxiliadora
+2025-06-29 01:09:43,625 - INFO - Foto encontrada para Cerro Muela del Diablo: Muela del diablo 02.jpg
+2025-06-29 01:09:43,626 - INFO - Total de 1 fotos agregadas para Cerro Muela del Diablo
+2025-06-29 01:09:46,089 - INFO - Foto encontrada para Plaza España: Cervantes 1.jpg
+2025-06-29 01:09:46,096 - INFO - Total de 1 fotos agregadas para Plaza España
+2025-06-29 01:09:48,743 - INFO - Foto encontrada para Plaza Murillo: Palacio Quemado y Plaza Murillo (2).JPG
+2025-06-29 01:09:48,750 - INFO - Total de 1 fotos agregadas para Plaza Murillo
+2025-06-29 01:09:51,085 - INFO - Foto encontrada para Plaza Franz Tamayo: Plaza del Estudiante La Paz Bolivia.jpg
+2025-06-29 01:09:51,086 - INFO - Total de 1 fotos agregadas para Plaza Franz Tamayo
+2025-06-29 01:09:53,445 - INFO - Foto encontrada para Plaza Abaroa: Eduardo Abaroa Hidalgo 2.jpg
+2025-06-29 01:09:53,445 - INFO - Total de 1 fotos agregadas para Plaza Abaroa
+2025-06-29 01:09:55,875 - INFO - Foto encontrada para Plaza 14 de Septiembre: Garita de Lima.png
+2025-06-29 01:09:55,877 - INFO - Total de 1 fotos agregadas para Plaza 14 de Septiembre
+2025-06-29 01:09:58,814 - INFO - Foto encontrada para Plaza de Las Culturas: Cóndores 1.jpg
+2025-06-29 01:09:58,816 - INFO - Total de 1 fotos agregadas para Plaza de Las Culturas
+2025-06-29 01:10:00,520 - INFO - Foto encontrada para Plaza San Francisco: Center of La Paz Bolivia.jpg
+2025-06-29 01:10:00,521 - INFO - Total de 1 fotos agregadas para Plaza San Francisco
+2025-06-29 01:10:02,385 - INFO - Foto encontrada para Plaza España: Cervantes 1.jpg
+2025-06-29 01:10:02,385 - INFO - Total de 1 fotos agregadas para Plaza España
+2025-06-29 01:10:05,045 - INFO - Foto encontrada para Jardín Botánico: Jardín botánico de La Paz.png
+2025-06-29 01:10:05,046 - INFO - Total de 1 fotos agregadas para Jardín Botánico
+2025-06-29 01:10:06,961 - INFO - Foto encontrada para Plaza Murillo: Palacio Quemado y Plaza Murillo (2).JPG
+2025-06-29 01:10:06,962 - INFO - Total de 1 fotos agregadas para Plaza Murillo
+2025-06-29 01:10:09,485 - INFO - Foto encontrada para Parque Laguna de Cota Cota: Cota cota.png
+2025-06-29 01:10:09,485 - INFO - Foto encontrada para Parque Laguna de Cota Cota: Parque de la Laguna de Cota Cota.jpg
+2025-06-29 01:10:09,486 - INFO - Total de 2 fotos agregadas para Parque Laguna de Cota Cota
+2025-06-29 01:10:10,737 - INFO - Foto encontrada para Mirador Killi Killi: La Paz - Killi Killi 2.jpg
+2025-06-29 01:10:10,737 - INFO - Total de 1 fotos agregadas para Mirador Killi Killi
+2025-06-29 01:10:12,090 - INFO - Foto encontrada para Plaza Franz Tamayo: Plaza del Estudiante La Paz Bolivia.jpg
+2025-06-29 01:10:12,091 - INFO - Total de 1 fotos agregadas para Plaza Franz Tamayo
+2025-06-29 01:10:13,595 - INFO - Foto encontrada para Plaza Abaroa: Eduardo Abaroa Hidalgo 2.jpg
+2025-06-29 01:10:13,596 - INFO - Total de 1 fotos agregadas para Plaza Abaroa
+2025-06-29 01:10:15,473 - INFO - Foto encontrada para Plaza Vicenta Juaristi Eguino: Retrato de cuerpo entero de Vicenta Juaristi de Eguino (cropped).jpg
+2025-06-29 01:10:15,475 - INFO - Foto encontrada para Plaza Vicenta Juaristi Eguino: Casa de Vicenta Juaristi Eguino.jpg
+2025-06-29 01:10:15,476 - INFO - Total de 2 fotos agregadas para Plaza Vicenta Juaristi Eguino
+2025-06-29 01:10:17,321 - INFO - Foto encontrada para Confucio: Confucius, fresco from a Western Han tomb of Dongping County, Shandong province, China.jpg
+2025-06-29 01:10:17,321 - INFO - Foto encontrada para Confucio: Confucio saludo.JPG
+2025-06-29 01:10:17,322 - INFO - Total de 2 fotos agregadas para Confucio
+2025-06-29 01:10:19,159 - INFO - Foto encontrada para Mercado Lanza: Nuevo Mercado Lanza.jpg
+2025-06-29 01:10:19,160 - INFO - Total de 1 fotos agregadas para Mercado Lanza
+2025-06-29 01:10:21,962 - INFO - Foto encontrada para Cerro Muela del Diablo: Muela del diablo 02.jpg
+2025-06-29 01:10:21,962 - INFO - Total de 1 fotos agregadas para Cerro Muela del Diablo
+2025-06-29 01:10:25,820 - INFO - Foto encontrada para Linea Verde: Libertador-Alto Obrajes: Estación Irpawi.jpg
+2025-06-29 01:10:25,822 - INFO - Total de 1 fotos agregadas para Linea Verde: Libertador-Alto Obrajes
+2025-06-29 01:10:27,413 - INFO - Foto encontrada para Línea Amarilla: Mirador-El Libertador: Teleferica La Paz.jpg
+2025-06-29 01:10:27,414 - INFO - Total de 1 fotos agregadas para Línea Amarilla: Mirador-El Libertador
+2025-06-29 01:10:41,439 - INFO - Foto encontrada para Lucha Libre Cholitas: Cholitas fight it out in the arena (February 2014) 2014-02-16 19-28.jpg
+2025-06-29 01:10:41,440 - INFO - Total de 1 fotos agregadas para Lucha Libre Cholitas
+2025-06-29 01:10:43,641 - INFO - Foto encontrada para Valle de las ánimas: Valle de las ánimas La Paz Bolivia (6).jpg
+2025-06-29 01:10:43,642 - INFO - Foto encontrada para Valle de las ánimas: Valle de las ánimas La Paz Bolivia (4).jpg
+2025-06-29 01:10:43,643 - INFO - Total de 2 fotos agregadas para Valle de las ánimas
+2025-06-29 01:10:45,244 - INFO - Foto encontrada para Valle de las Agujas: Valle de las ánimas La Paz Bolivia (6).jpg
+2025-06-29 01:10:45,245 - INFO - Foto encontrada para Valle de las Agujas: Valle de las ánimas La Paz Bolivia (4).jpg
+2025-06-29 01:10:45,245 - INFO - Total de 2 fotos agregadas para Valle de las Agujas
+2025-06-29 01:10:46,832 - INFO - Foto encontrada para Fokker F-27-400M Friendship: Busy Bee F-27 at Basel 1982.jpg
+2025-06-29 01:10:46,834 - INFO - Total de 1 fotos agregadas para Fokker F-27-400M Friendship
+2025-06-29 01:10:48,421 - INFO - Foto encontrada para Lucha libre de cholitas: Cholitas fight it out in the arena (February 2014) 2014-02-16 19-28.jpg
+2025-06-29 01:10:48,425 - INFO - Total de 1 fotos agregadas para Lucha libre de cholitas
+2025-06-29 01:10:51,086 - INFO - Foto encontrada para Douglas C-47: C-47 Dakota - Chino Airshow 2014 (15867578416).jpg
+2025-06-29 01:10:51,087 - INFO - Total de 1 fotos agregadas para Douglas C-47
+2025-06-29 01:10:52,675 - INFO - Foto encontrada para Lockheed T-33A Shooting Star: Thunderbirds Lockheed T-33 Shooting Star, Chino, California.jpg
+2025-06-29 01:10:52,677 - INFO - Total de 1 fotos agregadas para Lockheed T-33A Shooting Star
+2025-06-29 01:10:54,338 - INFO - Foto encontrada para Catedral Metropolitana: Catedral Metropolitana de La Paz.JPG
+2025-06-29 01:10:54,339 - INFO - Total de 1 fotos agregadas para Catedral Metropolitana
+2025-06-29 01:10:55,478 - INFO - Foto encontrada para Mirador Killi Killi: La Paz - Killi Killi 2.jpg
+2025-06-29 01:10:55,480 - INFO - Total de 1 fotos agregadas para Mirador Killi Killi
+2025-06-29 01:10:56,870 - INFO - Foto encontrada para Lockheed C-130A Hercules: Lockheed C-130 Hercules.jpg
+2025-06-29 01:10:56,871 - INFO - Total de 1 fotos agregadas para Lockheed C-130A Hercules
+2025-06-29 01:10:56,875 - INFO - Filtrados 131 lugares de 1382 originales
+2025-06-29 01:10:56,875 - INFO - Omitiendo nombre duplicado: 'Basílica María Auxiliadora' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:10:56,875 - INFO - Omitiendo nombre duplicado: 'Mirador Killi Killi' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:10:56,876 - INFO - Omitiendo nombre duplicado: 'Catedral Metropolitana' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:10:56,876 - INFO - Omitiendo nombre duplicado: 'Plaza Murillo' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:10:56,877 - INFO - Omitiendo nombre duplicado: 'Catedral Metropolitana' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:10:56,877 - INFO - Omitiendo nombre duplicado: 'Basílica de San Francisco' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:10:56,877 - INFO - Omitiendo nombre duplicado: 'Cerro Muela del Diablo' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:10:56,878 - INFO - Omitiendo nombre duplicado: 'Fokker F-27-400M Friendship' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:10:56,878 - INFO - Omitiendo nombre duplicado: 'Douglas C-47' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:10:56,878 - INFO - Omitiendo nombre duplicado: 'Lockheed C-130A Hercules' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:10:56,879 - INFO - Omitiendo nombre duplicado: 'Lockheed T-33A Shooting Star' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:10:56,879 - INFO - Omitiendo nombre duplicado: 'Confucio' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:10:56,880 - INFO - Omitiendo nombre duplicado: 'Mirador Killi Killi' (rating: 5.0) - ya existe con rating: 5.0
+2025-06-29 01:10:56,883 - INFO - Omitiendo nombre duplicado: 'Curtiss Commando C-46' (rating: 4.8) - ya existe con rating: 4.8
+2025-06-29 01:10:56,884 - INFO - Omitiendo nombre duplicado: 'Museo de la Revolución' (rating: 4.8) - ya existe con rating: 4.8
+2025-06-29 01:10:56,885 - INFO - Omitiendo nombre duplicado: 'Plaza España' (rating: 4.5) - ya existe con rating: 4.5
+2025-06-29 01:10:56,885 - INFO - Omitiendo nombre duplicado: 'Plaza Franz Tamayo' (rating: 4.5) - ya existe con rating: 4.5
+2025-06-29 01:10:56,885 - INFO - Omitiendo nombre duplicado: '7 Lagunas' (rating: 4.0) - ya existe con rating: 4.0
+2025-06-29 01:10:56,886 - INFO - Omitiendo nombre duplicado: '7 Lagunas' (rating: 4.0) - ya existe con rating: 4.0
+2025-06-29 01:10:56,886 - INFO - Omitiendo nombre duplicado: '7 Lagunas' (rating: 4.0) - ya existe con rating: 4.0
+2025-06-29 01:10:56,887 - INFO - Omitiendo nombre duplicado: 'Faro Murillo' (rating: 4.0) - ya existe con rating: 4.0
+2025-06-29 01:10:56,888 - INFO - Omitiendo nombre duplicado: 'Faro Murillo' (rating: 4.0) - ya existe con rating: 4.0
+2025-06-29 01:10:56,889 - INFO - Omitiendo nombre duplicado: 'La Iglesia de Jesucristo de los Santos de los Últimos Días' (rating: 3.7) - ya existe con rating: 3.7
+2025-06-29 01:10:56,890 - INFO - Eliminados 23 nombres duplicados. Lugares únicos: 108
+2025-06-29 01:10:57,005 - INFO - Insertados 10 lugares...
+2025-06-29 01:10:57,014 - INFO - Insertados 20 lugares...
+2025-06-29 01:10:57,021 - INFO - Insertados 30 lugares...
+2025-06-29 01:10:57,025 - INFO - Insertados 40 lugares...
+2025-06-29 01:10:57,030 - INFO - Insertados 50 lugares...
+2025-06-29 01:10:57,036 - INFO - Insertados 60 lugares...
+2025-06-29 01:10:57,040 - INFO - Insertados 70 lugares...
+2025-06-29 01:10:57,043 - INFO - Insertados 80 lugares...
+2025-06-29 01:10:57,047 - INFO - Insertados 90 lugares...
+2025-06-29 01:10:57,055 - INFO - Insertados 100 lugares...
+2025-06-29 01:10:57,074 - INFO - Total insertados/actualizados: 108
+2025-06-29 01:10:57,077 - INFO - === ESTADÍSTICAS POR CATEGORÍA ===
+2025-06-29 01:10:57,078 - INFO - mirador: 18 lugares
+2025-06-29 01:10:57,078 - INFO - museo: 14 lugares
+2025-06-29 01:10:57,078 - INFO - patrimonio_historico: 14 lugares
+2025-06-29 01:10:57,078 - INFO - teleferico: 13 lugares
+2025-06-29 01:10:57,079 - INFO - otros: 12 lugares
+2025-06-29 01:10:57,079 - INFO - iglesia: 9 lugares
+2025-06-29 01:10:57,079 - INFO - mercado: 8 lugares
+2025-06-29 01:10:57,079 - INFO - parque: 7 lugares
+2025-06-29 01:10:57,079 - INFO - plaza: 7 lugares
+2025-06-29 01:10:57,083 - INFO - teatro: 5 lugares
+2025-06-29 01:10:57,086 - INFO - basilica: 1 lugares
