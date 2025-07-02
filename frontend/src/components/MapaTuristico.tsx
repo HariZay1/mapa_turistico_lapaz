@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import axios from 'axios';
+
 import {
   Search, MapPin, Info, Camera, Clock, Star,
   Navigation, Menu, X, Globe, Filter, Compass,
   Share2, ChevronRight
 } from 'lucide-react';
-
 
 type Place = {
   id: number;
@@ -49,7 +48,7 @@ const App: React.FC = () => {
   const mapRef = useRef<L.Map | null>(null);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
-  // Detectar cambios en el tamaño de la pantalla
+ 
   useEffect(() => {
     const handleResize = () => {
       const mobile = window.innerWidth < 768;
@@ -63,7 +62,7 @@ const App: React.FC = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Colores y categorías consistentes con QGIS
+ 
   const categories: Category[] = [
     { id: 'all', nombre: 'Todos', icono: Globe, color: 'bg-blue-500', markerColor: '#3498db' },
     { id: 'teatro', nombre: 'Teatros', icono: Info, color: 'bg-purple-500', markerColor: '#9b59b6' },
@@ -78,19 +77,31 @@ const App: React.FC = () => {
     { id: 'patrimonio_historico', nombre: 'Patrimonio', icono: Clock, color: 'bg-indigo-500', markerColor: '#8e44ad' }
   ];
 
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
         if (firstLoad) setLoading(true);
         setError(null);
 
-        const url = `${process.env.REACT_APP_API_URL}/api/places`;
-        const params: any = {
-          categoria: activeCategory === 'all' ? null : activeCategory,
-          search: searchTerm
-        };
-        const response = await axios.get(url, { params });
-        setPlaces(response.data.data || []);
+        
+        let url = `http://localhost:3001/api/lugares`;
+        const params = new URLSearchParams();
+        
+        if (activeCategory !== 'all') {
+          params.append('categoria', activeCategory);
+        }
+        
+        if (searchTerm) {
+          params.append('search', searchTerm);
+        }
+
+        const queryString = params.toString();
+        const finalUrl = queryString ? `${url}?${queryString}` : url;
+
+        const response = await fetch(finalUrl);
+        const data = await response.json();
+        setPlaces(data.data || []);
       } catch {
         setError('Error al cargar los datos turísticos');
       } finally {
@@ -103,10 +114,10 @@ const App: React.FC = () => {
     return () => clearTimeout(timer);
   }, [activeCategory, searchTerm]);
 
-  // Centrar mapa en un lugar
+ 
   const centerOnPlace = (place: Place) => {
     if (mapRef.current) {
-      mapRef.current.flyTo([place.lat, place.lng], 15, { duration: 1 });
+      mapRef.current.flyTo([place.lat, place.lng], 17, { duration: 1 });
     }
     setSelectedPlace(place);
     if (isMobile) {
@@ -118,7 +129,7 @@ const App: React.FC = () => {
     window.open(`https://www.google.com/maps/dir/?api=1&destination=${place.lat},${place.lng}`, '_blank');
   };
 
-  // Iconos personalizados para Leaflet
+
   const categoryEmojis: Record<string, string> = {
     teatro: "🎭",
     teleferico: "🚡",
@@ -139,24 +150,19 @@ const App: React.FC = () => {
     return L.divIcon({
       className: 'custom-marker',
       html: `
-        <div title="${descripcion_corta ? descripcion_corta.replace(/"/g, '&quot;') : ''}" style="display: flex; flex-direction: column; align-items: center;">
-          <div class="marker-pin" style="background-color: ${categoryData.markerColor}; width: ${isMobile ? '24px' : '32px'}; height: ${isMobile ? '24px' : '32px'}; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: ${isMobile ? '16px' : '20px'};">${emoji}</span>
+        <div title="${name} - ${descripcion_corta ? descripcion_corta.replace(/"/g, '&quot;') : ''}" style="display: flex; flex-direction: column; align-items: center; cursor: pointer;">
+          <div class="marker-pin" style="background-color: ${categoryData.markerColor}; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: transform 0.2s;">
+            <span style="font-size: 18px;">${emoji}</span>
           </div>
-          ${!isMobile ? `
-          <div style="background: ${categoryData.markerColor}; color: #fff; font-size: 13px; padding: 2px 8px; border-radius: 6px; margin-top: 2px; box-shadow: 0 1px 4px rgba(0,0,0,0.15); max-width: 110px; text-align: center; font-weight: bold;">
-            ${name}
-          </div>
-          ` : ''}
         </div>
       `,
-      iconSize: isMobile ? [24, 24] : [110, 55],
-      iconAnchor: isMobile ? [12, 12] : [55, 55],
-      popupAnchor: isMobile ? [0, -12] : [0, -55]
+      iconSize: [36, 36],
+      iconAnchor: [18, 18],
+      popupAnchor: [0, -18]
     });
   };
 
-  // Función para volver al centro
+
   const handleCenterMap = () => {
     mapRef.current?.flyTo([-16.5, -68.15], 13);
   };
@@ -192,7 +198,6 @@ const App: React.FC = () => {
 
   return (
     <div className="flex flex-col h-screen bg-gray-100 relative">
-      {/* Header */}
       <header className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg z-20">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center space-x-3">
@@ -217,7 +222,6 @@ const App: React.FC = () => {
       </header>
 
       <div className="flex flex-1 overflow-hidden relative">
-        {/* Sidebar - Menú lateral */}
         <aside 
           ref={sidebarRef}
           className={`${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 fixed md:relative z-30 w-full md:w-96 h-full bg-white shadow-xl transition-transform duration-300 ease-in-out overflow-y-auto`}
@@ -226,7 +230,6 @@ const App: React.FC = () => {
           }}
         >
           <div className="p-4 h-full flex flex-col">
-            {/* Buscador */}
             <div className="relative mb-4">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <Search className="h-5 w-5 text-gray-400" />
@@ -240,7 +243,6 @@ const App: React.FC = () => {
               />
             </div>
 
-            {/* Filtros */}
             <div className="mb-4">
               <div className="flex justify-between items-center mb-2">
                 <h3 className="font-semibold text-gray-700">Filtros</h3>
@@ -268,7 +270,6 @@ const App: React.FC = () => {
               )}
             </div>
 
-            {/* Lista de lugares */}
             <div className="flex-1 overflow-y-auto">
               <div className="flex justify-between items-center mb-2">
                 <h3 className="font-semibold text-gray-700">
@@ -288,13 +289,13 @@ const App: React.FC = () => {
                       <div
                         key={place.id}
                         onClick={() => centerOnPlace(place)}
-                        className={`p-3 border rounded-lg cursor-pointer transition-all ${selectedPlace?.id === place.id ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:border-blue-300'}`}
+                        className={`p-3 border rounded-lg cursor-pointer transition-all overflow-hidden ${selectedPlace?.id === place.id ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:border-blue-300'}`}
                       >
                         <div className="flex items-start space-x-3">
                           <div className={`p-2 rounded-lg ${categoria.color} text-white flex-shrink-0`}>
                             <categoria.icono className="h-4 w-4" />
                           </div>
-                          <div className="flex-1 min-w-0">
+                          <div className="flex-1 min-w-0 overflow-hidden">
                             <h4 className="font-medium text-gray-900 truncate">{place.nombre}</h4>
                             <p className="text-sm text-gray-500 mt-1 truncate">{place.descripcion_corta}</p>
                             <div className="flex items-center mt-2 space-x-3">
@@ -322,7 +323,6 @@ const App: React.FC = () => {
           </div>
         </aside>
 
-        {/* Mapa */}
         <main className="flex-1 relative z-0">
           <MapContainer
             center={[-16.5, -68.15]}
@@ -344,51 +344,53 @@ const App: React.FC = () => {
                   click: () => setSelectedPlace(place)
                 }}
               >
-                <Tooltip direction="top" offset={[0, -10]} opacity={1} permanent={false}>
-                  <div className="p-2 rounded-lg bg-white shadow text-gray-800 min-w-[120px]">
-                    <div className="font-semibold text-blue-700">{place.nombre}</div>
-                    <div className="text-xs text-gray-600">{place.descripcion_corta}</div>
+                <Tooltip 
+                  direction="top" 
+                  offset={[0, -10]} 
+                  opacity={1} 
+                  permanent={false}
+                >
+                  <div style={{ 
+                    maxWidth: "250px", 
+                    whiteSpace: "normal", 
+                    wordWrap: "break-word" 
+                  }}>
+                    <div style={{ fontWeight: "600", color: "#3b82f6", marginBottom: "4px" }}>
+                      {place.nombre}
+                    </div>
+                    <div style={{ fontSize: "0.875rem", color: "#4b5563" }}>
+                      {place.descripcion_corta}
+                    </div>
                   </div>
                 </Tooltip>
-                <Popup className="custom-popup">
-                  <div>
-                    <h3 className="font-semibold text-blue-600">{place.nombre}</h3>
-                    <p className="text-sm text-gray-600">{place.descripcion_corta}</p>
-                  </div>
-                </Popup>
               </Marker>
             ))}
           </MapContainer>
         </main>
 
-        {/* Panel de detalles */}
         {selectedPlace && (
           <div
             className={`fixed z-40 bg-white shadow-2xl transition-all duration-300
       ${isMobile
-        ? 'left-0 right-0 bottom-0 top-auto rounded-t-2xl max-h-[80vh] h-[70vh] animate-slideUp'
-        : 'inset-0 md:inset-auto md:top-0 md:right-0 md:h-full min-w-[400px] w-[540px] bg-white md:rounded-l-2xl border-l-4 border-blue-600'
+        ? 'left-0 right-0 bottom-0 top-auto rounded-t-2xl max-h-[80vh] h-[70vh] overflow-y-auto'
+        : 'inset-0 md:inset-auto md:top-0 md:right-0 md:h-full min-w-[400px] w-[540px] bg-white md:rounded-l-2xl border-l-4 border-blue-600 overflow-y-auto'
       }`}
-            style={isMobile ? { overflowY: 'auto' } : {}}
           >
-            <div className="p-4 md:p-8 h-full flex flex-col">
-              {/* Barra para arrastrar en móvil */}
+            <div className="p-4 md:p-8">
               {isMobile && (
                 <div className="flex justify-center mb-2">
                   <div className="w-12 h-1.5 bg-gray-300 rounded-full" />
                 </div>
               )}
 
-              {/* Botón cerrar siempre visible arriba */}
               <button
                 onClick={() => setSelectedPlace(null)}
-                className="absolute top-3 right-3 p-2 text-gray-400 hover:text-gray-600 transition"
+                className="absolute top-3 right-3 p-2 text-gray-400 hover:text-gray-600 transition z-50"
                 title="Cerrar"
               >
                 <X className="h-6 w-6" />
               </button>
 
-              {/* Contenido del panel */}
               <div className="flex justify-between items-start mb-4 md:mb-6">
                 <div className="flex items-start space-x-3 md:space-x-5">
                   <div className={`p-3 md:p-4 rounded-xl shadow ${categories.find(c => c.id === selectedPlace.categoria)?.color || 'bg-gray-500'} text-white flex-shrink-0`}>
@@ -404,7 +406,6 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Imagen principal grande */}
               {selectedPlace.fotos && selectedPlace.fotos.length > 0 && (
                 <div className="mb-4 md:mb-7 flex justify-center">
                   <img
@@ -416,7 +417,6 @@ const App: React.FC = () => {
                 </div>
               )}
 
-              {/* Información detallada */}
               <div className="space-y-4 md:space-y-6 mb-4 md:mb-6">
                 <div>
                   <span className="font-semibold text-blue-700">Descripción:</span>
@@ -467,7 +467,6 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Galería de fotos adicionales */}
               {selectedPlace.fotos && selectedPlace.fotos.length > 1 && (
                 <div className="mb-4 md:mb-7">
                   <span className="font-semibold text-blue-700">Galería de fotos:</span>
@@ -485,8 +484,7 @@ const App: React.FC = () => {
                 </div>
               )}
 
-              {/* Acciones */}
-              <div className="flex space-x-3 mt-auto pt-4 border-t">
+              <div className="flex space-x-3 pt-4 border-t">
                 <button
                   onClick={() => generateRoute(selectedPlace)}
                   className="flex-1 flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition shadow text-sm md:text-base"
@@ -535,7 +533,6 @@ const App: React.FC = () => {
         )}
       </div>
 
-      {/* Toolbar flotante SIEMPRE visible sobre el mapa */}
       <div
         className={`fixed top-16 right-6 z-30 flex flex-col space-y-3 pointer-events-none
     ${selectedPlace && isMobile ? 'hidden' : ''}
@@ -561,7 +558,6 @@ const App: React.FC = () => {
         )}
       </div>
 
-      {/* Overlay para móvil */}
       {isMenuOpen && isMobile && (
         <div
           className="fixed inset-0 bg-black/50 z-20 md:hidden"
